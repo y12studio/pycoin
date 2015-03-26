@@ -8,6 +8,9 @@ NetworkValues = namedtuple('NetworkValues',
 
 NETWORKS = (
 
+    # Y12COIN Template mainnet: xprv/xpub
+    NetworkValues("YP_COIN", "mainnet", "YP_ID", b'\xYP_HEX_SECRET_KEY', b'\xYP_HEX_PUBKEY_ADDRESS', b'\YP_HEX_SCRIPT_ADDRESS', h2b("YP_HEX_EXT_SECRET_KEY"), h2b("YP_HEX_EXT_PUBLIC_KEY")),
+
     # BTC bitcoin mainnet : xprv/xpub
     NetworkValues("Bitcoin", "mainnet", "BTC", b'\x80', b'\0', b'\5', h2b("0488ADE4"), h2b("0488B21E")),
     # BTC bitcoin testnet : tprv/tpub
