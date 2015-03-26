@@ -32,10 +32,10 @@ def gpg_entropy():
 
 def get_entropy():
     entropy = bytearray()
-    try:
-        entropy.extend(gpg_entropy())
-    except Exception:
-        print("warning: can't use gpg as entropy source", file=sys.stdout)
+    #try:
+    #    entropy.extend(gpg_entropy())
+    #except Exception:
+    #    print("warning: can't use gpg as entropy source", file=sys.stdout)
     try:
         entropy.extend(open("/dev/random", "rb").read(64))
     except Exception:
